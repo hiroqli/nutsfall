@@ -4,10 +4,17 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <script>
     var redirect_to = "//qli.jp/";
+    if(location.host="hiroqli.github.io" || location.host="qli.jp"){
+    	redirect_to = redirect_to + location.pathname;
+    } else {
+    	redirect_to = location.href;
+    }
+    let link = document.getElementById('newLocation');
+	let url = redirect_to;
   </script>
 </head>
 <body>
     <h1>Redirecting...</h1>
-      <a href="#">Click here if you are not redirected.<a>
+      <a id="newLocation" href="#">Click here if you are not redirected.<a>
 </body>
 </html>
